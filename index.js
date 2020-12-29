@@ -4,7 +4,7 @@ const client = new Discord.Client({
 });
 const { loadCommands } = require('./utils/loadCommands');
 
-client.login("process.env.TOKEN");
+client.login(process.env.TOKEN);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
