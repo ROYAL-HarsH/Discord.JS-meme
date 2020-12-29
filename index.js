@@ -4,7 +4,7 @@ const client = new Discord.Client({
 });
 const { loadCommands } = require('./utils/loadCommands');
 
-client.login("BOT_TOKEN");
+client.login("process.env.TOKEN");
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -18,7 +18,7 @@ client.on('message', message => {
     const cmd = messageArray[0];
     const args = messageArray.slice(1);
     
-    const prefix = "!";
+    const prefix = "~";
 
     if (!message.content.startsWith(prefix)) return;
     
